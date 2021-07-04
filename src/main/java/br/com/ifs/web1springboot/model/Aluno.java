@@ -1,14 +1,15 @@
 package br.com.ifs.web1springboot.model;
 
+
 import lombok.Getter;
 import lombok.Setter;
-
+import java.util.Set;
 import javax.persistence.*;
 
 @Getter
 @Setter
 @Entity
-@Table
+@Table(name = "aluno")
 public class Aluno {
 
     @Id
@@ -22,10 +23,12 @@ public class Aluno {
     @Column
     private String matricula;
 
-    @Column
-    private String fone;
 
-    @Column
-    private String endereco;
-
+    @ManyToMany
+    @JoinTable(
+            name = "aluno_curso",
+            joinColumns = @JoinColumn(name = "id_aluno"),
+            inverseJoinColumns = @JoinColumn(name = "id_curso")
+    )
+    Set<Curso> cursoAlu;
 }

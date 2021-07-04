@@ -5,7 +5,6 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Aluno_dto {
-
-    private String matricula, nome;
+public class Curso_dto {
+    private String nome;
 }

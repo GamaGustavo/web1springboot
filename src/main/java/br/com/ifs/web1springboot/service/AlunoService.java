@@ -18,6 +18,7 @@ public class AlunoService {
             throw new Exception("Aluno nulo!");
         }
         alunoRepository.save(aluno);
+
     }
     public List<Aluno> getAll() {
         return (List<Aluno>)alunoRepository.findAll();
