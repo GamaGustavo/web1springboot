@@ -1,10 +1,10 @@
-package br.com.ifs.web1springboot.dto;
+package br.com.ifs.web1springboot.model.dto;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class Curso_dto {
+public class CursoDTO {
     private String nome;
 }
