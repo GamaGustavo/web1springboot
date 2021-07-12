@@ -1,7 +1,7 @@
-package br.com.ifs.web1springboot.model.dto;
+package br.com.ifs.web1springboot.dto;
 
-import br.com.ifs.web1springboot.model.Binance;
-import br.com.ifs.web1springboot.model.Coin;
+import br.com.ifs.web1springboot.model.binance.Binance;
+import br.com.ifs.web1springboot.model.binance.Coin;
 import lombok.Getter;
 import lombok.Setter;
 

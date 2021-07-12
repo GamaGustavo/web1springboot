@@ -23,11 +23,14 @@ public class Aluno {
     @Column
     private String matricula;
 
+    @ManyToOne
+    @JoinColumn(name = "id_curso")
+    private Curso curso;
 
-    @ManyToMany
-    @JoinTable(name = "aluno_curso",
-            joinColumns = @JoinColumn(name = "id_aluno"),
-            inverseJoinColumns = @JoinColumn(name = "id_curso")
-    )
-    Set<Curso> cursoAlu;
+    @ManyToMany(mappedBy = "alunos")
+    private Set<Disciplina> disciplinas;
+
+    @OneToOne(mappedBy = "aluno")
+    private  Avaliacao avaliacao;
+
 }

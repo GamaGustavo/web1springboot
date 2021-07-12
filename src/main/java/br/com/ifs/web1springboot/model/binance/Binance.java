@@ -1,4 +1,4 @@
-package br.com.ifs.web1springboot.model;
+package br.com.ifs.web1springboot.model.binance;
 
 import lombok.Getter;
 import lombok.Setter;

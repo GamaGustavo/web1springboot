@@ -21,14 +21,9 @@ public class Curso {
     @Column
     private String nome;
 
-   /* @Transient
-    @ManyToMany(mappedBy = "cursoAlu")*/
-   @Transient
-   @ManyToMany
-   @JoinTable(name = "aluno_curso",
-           joinColumns = @JoinColumn(name = "id_curso"),
-           inverseJoinColumns = @JoinColumn(name = "id_aluno")
-   )
-    Set<Aluno> aluCurso;
+   @OneToMany(mappedBy = "curso")
+    private Set<Aluno> alunos;
 
+   @OneToMany(mappedBy = "curso")
+   private Set<Disciplina> disciplinas;
 }

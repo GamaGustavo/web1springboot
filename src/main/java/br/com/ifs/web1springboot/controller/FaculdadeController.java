@@ -1,23 +1,30 @@
 package br.com.ifs.web1springboot.controller;
 
 import br.com.ifs.web1springboot.dto.AlunoDTO;
-import br.com.ifs.web1springboot.model.*;
-import br.com.ifs.web1springboot.service.AlunoService;
-import br.com.ifs.web1springboot.service.CursoService;
+import br.com.ifs.web1springboot.model.Aluno;
+import br.com.ifs.web1springboot.model.Avaliacao;
+import br.com.ifs.web1springboot.model.Curso;
+import br.com.ifs.web1springboot.model.Disciplina;
+import br.com.ifs.web1springboot.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("exemplo")
-public class ExemploRest {
-
+@Controller
+@RequestMapping("faculdade")
+public class FaculdadeController {
     @Autowired
     private AlunoService alunoService;
     @Autowired
     private CursoService cursoService;
+    @Autowired
+    private DisciplinaService disciplinaService;
+    @Autowired
+    private ProvaService provaService;
+    @Autowired
+    private AvaliacaoService avaliacaoService;
 
     @RequestMapping(value = "/olamundo", method = RequestMethod.GET)
     public Object olamundo() {
@@ -49,3 +56,4 @@ public class ExemploRest {
     }
 
 }
+

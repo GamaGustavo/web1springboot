@@ -1,8 +1,8 @@
-package br.com.ifs.web1springboot.service;
+package br.com.ifs.web1springboot.service.binance;
 
-import br.com.ifs.web1springboot.model.dto.BinanceDTO;
-import br.com.ifs.web1springboot.model.Binance;
-import br.com.ifs.web1springboot.repository.BinanceRepository;
+import br.com.ifs.web1springboot.dto.BinanceDTO;
+import br.com.ifs.web1springboot.model.binance.Binance;
+import br.com.ifs.web1springboot.repository.binance.BinanceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.ExchangeStrategies;

@@ -1,12 +1,12 @@
 package br.com.ifs.web1springboot.controller;
 
-import br.com.ifs.web1springboot.service.PriceService;
-import br.com.ifs.web1springboot.service.CoinService;
+import br.com.ifs.web1springboot.service.binance.PriceService;
+import br.com.ifs.web1springboot.service.binance.CoinService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import br.com.ifs.web1springboot.service.BinanceService;
+import br.com.ifs.web1springboot.service.binance.BinanceService;
 
 @RestController
 @RequestMapping("cripto")
